@@ -1,16 +1,296 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cotizador Inova Enterprise MX</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/boot.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-dark text-white">
+  <div class="container">
+    <div class="text-center my-5">
+      <h1 class="display-4">Cotizador Inova Enterprise MX</h1>
+    </div>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">
+              Fotografía & Video Producción de video
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <!-- Producción RRSS Lite -->
+            <div class="custom-control custom-radio">
+              <input type="radio" id="lite" name="prod_rrss" class="custom-control-input" data-price="7500">
+              <label class="custom-control-label" for="lite">Producción RRSS Lite - $7,500</label>
+            </div>
+        
+          
+        
+            <hr>
+        
+            <!-- Producción RRSS Pro -->
+            <div class="custom-control custom-radio">
+              <input type="radio" id="pro" name="prod_rrss" class="custom-control-input" data-price="25000">
+              <label class="custom-control-label" for="pro">Producción RRSS Pro - $25,000</label>
+            </div>
+        
+           
+        
+            
+        
+            <hr>
+        
+            <!-- Video Ad Corto -->
+            <div class="custom-control custom-radio">
+              <input type="radio" id="shortAd" name="prod_video" class="custom-control-input" data-price="5000">
+              <label class="custom-control-label" for="shortAd">Video Ad Corto - $<span id="shortAdPrice">5,000</span></label>
+            </div>
+        
+            
+        
+            <!-- Slider de duración para Video Ad Corto -->
+            <div class="slidecontainer">
+              Duración del video: <span id="shortAdDuration">15</span> segundos
+              <input type="range" min="15" max="30" value="15" class="slider" id="shortAdSlider">
+            </div>
+        
+            <hr>
+
+            <!-- Entrega Express para Video Ad Corto -->
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" id="expressShortAd" class="custom-control-input" data-extra="0.25">
+              <label class="custom-control-label" for="expressShortAd">Entrega Express</label>
+            </div>
+
+            <!-- Subtítulos en otro idioma for Pro -->
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" id="subtitlePro" class="custom-control-input" data-price="1000">
+              <label class="custom-control-label" for="subtitlePro">Subtítulos en otro idioma</label>
+            </div>
+            <!-- Display total -->
+            <!-- Display group total -->
+            <h3>Total del Grupo: <span id="groupTotal">0</span></h3>
+          </div>
+        </div>
+        
+
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Fotografía & Video Fotografía
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              Publicidad Pagada
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+              Community Management
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+              aria-expanded="false" aria-controls="collapseFive">
+              Páginas Web
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+      <!-- Continuation of HTML -->
+
+      <!-- Branding & Diseño Accordion -->
+      <div class="card">
+        <div class="card-header" id="headingSix">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+              aria-expanded="false" aria-controls="collapseSix">
+              Branding & Diseño
+            </button>
+          </h5>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Paginas Web Copywriting Accordion -->
+      <div class="card">
+        <div class="card-header" id="headingSeven">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+              aria-expanded="false" aria-controls="collapseSeven">
+              Paginas Web Copywriting
+            </button>
+          </h5>
+        </div>
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Experiencias Inmersivas Accordion -->
+      <div class="card">
+        <div class="card-header" id="headingEight">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+              aria-expanded="false" aria-controls="collapseEight">
+              Experiencias Inmersivas
+            </button>
+          </h5>
+        </div>
+        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SEO Accordion -->
+      <div class="card">
+        <div class="card-header" id="headingNine">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"
+              aria-expanded="false" aria-controls="collapseNine">
+              SEO
+            </button>
+          </h5>
+        </div>
+        <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Tienda en Línea Accordion -->
+      <div class="card">
+        <div class="card-header" id="headingTen">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen"
+              aria-expanded="false" aria-controls="collapseTen">
+              Tienda en Línea
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Mantenimiento Accordion -->
+      <div class="card">
+        <div class="card-header" id="headingEleven">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven"
+              aria-expanded="false" aria-controls="collapseEleven">
+              Mantenimiento
+            </button>
+          </h5>
+        </div>
+        <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Asesoría Accordion -->
+      <div class="card">
+        <div class="card-header" id="headingTwelve">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwelve"
+              aria-expanded="false" aria-controls="collapseTwelve">
+              Asesoría
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Planes Integrales Accordion -->
+      <div class="card">
+        <div class="card-header" id="headingThirteen">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThirteen"
+              aria-expanded="false" aria-controls="collapseThirteen">
+              Planes Integrales
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <hr>
+    <h3>Cotización Total: <span id="total">0</span></h3>
+  </div>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
 </html>
