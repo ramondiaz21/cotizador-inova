@@ -36,37 +36,79 @@
               <input type="radio" id="lite" name="prod_rrss" class="custom-control-input" data-price="7500">
               <label class="custom-control-label" for="lite">Producción RRSS Lite - $7,500</label>
             </div>
-        
-          
-        
+
+
+
             <hr>
-        
+
             <!-- Producción RRSS Pro -->
             <div class="custom-control custom-radio">
               <input type="radio" id="pro" name="prod_rrss" class="custom-control-input" data-price="25000">
               <label class="custom-control-label" for="pro">Producción RRSS Pro - $25,000</label>
             </div>
-        
-           
-        
-            
-        
+
+
+
+
+
             <hr>
-        
+
             <!-- Video Ad Corto -->
             <div class="custom-control custom-radio">
               <input type="radio" id="shortAd" name="prod_video" class="custom-control-input" data-price="5000">
-              <label class="custom-control-label" for="shortAd">Video Ad Corto - $<span id="shortAdPrice">5,000</span></label>
+              <label class="custom-control-label" for="shortAd">Video Ad Corto - $<span
+                  id="shortAdPrice">5,000</span></label>
             </div>
-        
-            
-        
+
+
+
             <!-- Slider de duración para Video Ad Corto -->
             <div class="slidecontainer">
               Duración del video: <span id="shortAdDuration">15</span> segundos
               <input type="range" min="15" max="30" value="15" class="slider" id="shortAdSlider">
             </div>
-        
+
+            <hr>
+
+            <!-- Video Ad Largo -->
+            <div class="custom-control custom-radio">
+              <input type="radio" id="largeAd" name="prod_video" class="custom-control-input" data-price="10000">
+              <label class="custom-control-label" for="largeAd">Video Ad Largo - $<span
+                  id="largeAdPrice">10,000</span></label>
+            </div>
+
+
+
+            <!-- Slider de duración para Video Ad Corto -->
+            <div class="slidecontainer">
+              Duración del video: <span id="largeAdDuration">30</span> segundos
+              <input type="range" min="30" max="60" value="30" class="slider" id="largeAdSlider">
+            </div>
+
+            <!-- Mini Clips para Video Ad Largo
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"># de Mini clips</span>
+              </div>
+              <input type="number" id="miniClipLargeAdQuantity" class="form-control" min="1">
+            </div> -->
+
+            <hr>
+
+            <!-- Videos explicativos -->
+            <div class="custom-control custom-radio">
+              <input type="radio" id="explanatoryVideo" name="prod_video" class="custom-control-input"
+                data-price="25000">
+              <label class="custom-control-label" for="explanatoryVideo">Videos explicativos - $<span
+                  id="explanatoryVideoPrice">25,000</span></label>
+            </div>
+
+            <!-- Slider de duración para Videos explicativos -->
+            <div class="slidecontainer">
+              Duración del video: <span id="explanatoryVideoDuration">60</span> segundos
+              <input type="range" min="60" max="120" value="60" class="slider" id="explanatoryVideoSlider">
+            </div>
+
             <hr>
 
             <!-- Entrega Express para Video Ad Corto -->
@@ -80,12 +122,19 @@
               <input type="checkbox" id="subtitlePro" class="custom-control-input" data-price="1000">
               <label class="custom-control-label" for="subtitlePro">Subtítulos en otro idioma</label>
             </div>
+
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" id="miniClipExplanatoryVideo" class="custom-control-input" data-price="500"
+                disabled>
+              <label class="custom-control-label" for="miniClipExplanatoryVideo">Mini clips para redes sociales (no
+                disponible)</label>
+            </div>
             <!-- Display total -->
             <!-- Display group total -->
             <h3>Total del Grupo: <span id="groupTotal">0</span></h3>
           </div>
         </div>
-        
+
 
       </div>
       <div class="card">
