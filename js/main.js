@@ -1,11 +1,16 @@
 $(document).ready(function () {
-    $('input[type="checkbox"], input[type="range"], #miniClipQuantity').on('input', updatePrices);
+    collapseOne();
+    collapseTwo();
+    collapseThree();
+    updateTotal();
+});
 
-    // Enable or disable the mini clips input number based on the selected checkbox
-    $('input[type="checkbox"]').change(function () {
-        var cardBody = $(this).closest('.card-body');
+function collapseOne() {
+    $('#collapseOne input[type="checkbox"], #collapseOne input[type="range"], #collapseOne #miniClipQuantity').on('input', updatePrices);
+
+    $('#collapseOne input[type="checkbox"]').change(function () {
         if ($(this).is('#largeAd') || $(this).is('#explanatoryVideo')) {
-            cardBody.find('#miniClipQuantity').prop('disabled', !this.checked);
+            $('#collapseOne #miniClipQuantity').prop('disabled', !this.checked);
         }
     });
 
@@ -45,12 +50,75 @@ $(document).ready(function () {
         groupTotal += miniClipPrice;
 
         cardBody.find('#groupTotal').text(groupTotal.toFixed(2));
+        updateTotal();
+    }
+
+}
+
+function collapseTwo() {
+
+    $('#collapseTwo input[type="checkbox"], #collapseTwo input[type="number"]').on('input', updatePricesFotografia);
+
+    $('#collapseTwo input[type="checkbox"]').change(function () {
+        var inputNumber = $(this).parent().next().find('input[type="number"]');
+        inputNumber.prop('disabled', !this.checked);
+    });
+
+    function updatePricesFotografia() {
+        var groupTotalFotografia = 0;
+
+        $('#collapseTwo input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotalFotografia += isNaN(price) ? 0 : price;
+        });
+
+        $('#collapseTwo input[type="number"]').each(function () {
+            if (!$(this).prop('disabled')) {
+                var price = Number($(this).data('price'));
+                groupTotalFotografia += isNaN(price) ? 0 : price * $(this).val();
+            }
+        });
+
+        $('#groupTotalFotografia').text(groupTotalFotografia.toFixed(2));
 
         var total = 0;
-        $('.card-body').each(function () {
-            total += Number($(this).find('#groupTotal').text());
+        $('.groupTotal').each(function () {
+            total += Number($(this).text());
         });
 
         $('#total').text(total.toFixed(2));
     }
-});
+}
+
+function collapseThree() {
+    $('#collapseThree input[type="checkbox"]').on('input', updatePricesPublicidadPagada);
+
+    function updatePricesPublicidadPagada() {
+        var groupTotalPublicidadPagada = 0;
+
+        $('#collapseThree input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotalPublicidadPagada += isNaN(price) ? 0 : price;
+        });
+
+        $('#groupTotalPublicidadPagada').text(groupTotalPublicidadPagada.toFixed(2));
+
+        var total = 0;
+        $('.groupTotal').each(function () {
+            total += Number($(this).text());
+        });
+
+        $('#total').text(total.toFixed(2));
+    }
+}
+
+
+
+function updateTotal() {
+    var total = 0;
+    $('.groupTotal').each(function () {
+        total += Number($(this).text());
+    });
+
+    $('#total').text(total.toFixed(2));
+}
