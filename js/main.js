@@ -3,12 +3,20 @@ $(document).ready(function () {
     collapseTwo();
     collapseThree();
     collapseFour();
+    collapseFive();
+    collapseSeven();
     updateTotal();
 });
 
 function collapseOne() {
     $('#collapseOne input[type="checkbox"], #collapseOne input[type="range"], #collapseOne #miniClipQuantity').on('input', updatePrices);
 
+    $('#collapseOne input[type="range"]').on('input', function () {
+        var sliderId = $(this).attr('id');
+        var labelId = '#' + sliderId.replace('Slider', 'Duration');
+        $(labelId).text($(this).val());
+    });
+    
     $('#collapseOne input[type="checkbox"]').change(function () {
         if ($(this).is('#largeAd') || $(this).is('#explanatoryVideo')) {
             $('#collapseOne #miniClipQuantity').prop('disabled', !this.checked);
@@ -125,6 +133,55 @@ function collapseFour() {
         });
 
         $('#groupTotalCommunityManagement').text(groupTotalCommunityManagement.toFixed(2));
+
+        var total = 0;
+        $('.groupTotal').each(function () {
+            total += Number($(this).text());
+        });
+
+        $('#total').text(total.toFixed(2));
+    }
+}
+
+function collapseFive() {
+    $('#collapseFive input[type="checkbox"]').on('input', updatePricesPaginasWeb);
+
+    function updatePricesPaginasWeb() {
+        var groupTotalPaginasWeb = 0;
+
+        $('#collapseFive input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotalPaginasWeb += isNaN(price) ? 0 : price;
+        });
+
+        $('#groupTotalPaginasWeb').text(groupTotalPaginasWeb.toFixed(2));
+
+        var total = 0;
+        $('.groupTotal').each(function () {
+            total += Number($(this).text());
+        });
+
+        $('#total').text(total.toFixed(2));
+    }
+}
+
+function collapseSeven() {
+    $('#collapseSeven input[type="checkbox"]').on('input', updatePricesPaginasWebCopy);
+
+    $('#pwc_paquete3').change(function () {
+        var isPaquete3Checked = this.checked;
+        $('#pwc_extras1, #pwc_extras2').prop('disabled', !isPaquete3Checked);
+    });
+
+    function updatePricesPaginasWebCopy() {
+        var groupTotalPaginasWebCopy = 0;
+
+        $('#collapseSeven input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotalPaginasWebCopy += isNaN(price) ? 0 : price;
+        });
+
+        $('#groupTotalPaginasWebCopy').text(groupTotalPaginasWebCopy.toFixed(2));
 
         var total = 0;
         $('.groupTotal').each(function () {
