@@ -2,6 +2,7 @@ $(document).ready(function () {
     collapseOne();
     collapseTwo();
     collapseThree();
+    collapseFour();
     updateTotal();
 });
 
@@ -112,7 +113,27 @@ function collapseThree() {
     }
 }
 
+function collapseFour() {
+    $('#collapseFour input[type="checkbox"]').on('input', updatePricesCommunityManagement);
 
+    function updatePricesCommunityManagement() {
+        var groupTotalCommunityManagement = 0;
+
+        $('#collapseFour input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotalCommunityManagement += isNaN(price) ? 0 : price;
+        });
+
+        $('#groupTotalCommunityManagement').text(groupTotalCommunityManagement.toFixed(2));
+
+        var total = 0;
+        $('.groupTotal').each(function () {
+            total += Number($(this).text());
+        });
+
+        $('#total').text(total.toFixed(2));
+    }
+}
 
 function updateTotal() {
     var total = 0;
