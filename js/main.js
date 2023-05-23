@@ -65,7 +65,7 @@ function collapseOne() {
         var miniClipPrice = miniClipQuantity * 500;
         groupTotal += miniClipPrice;
 
-        cardBody.find('#groupTotal').text(groupTotal.toFixed(2));
+        cardBody.find('#groupTotal').text(formatNumber(groupTotal));
         updateTotal();
     }
 
@@ -95,7 +95,7 @@ function collapseTwo() {
             }
         });
 
-        $('#groupTotalFotografia').text(groupTotalFotografia.toFixed(2));
+        $('#groupTotalFotografia').text(formatNumber(groupTotalFotografia));
 
         var total = 0;
         $('.groupTotal').each(function () {
@@ -117,7 +117,7 @@ function collapseThree() {
             groupTotalPublicidadPagada += isNaN(price) ? 0 : price;
         });
 
-        $('#groupTotalPublicidadPagada').text(groupTotalPublicidadPagada.toFixed(2));
+        $('#groupTotalPublicidadPagada').text(formatNumber(groupTotalPublicidadPagada));
 
         var total = 0;
         $('.groupTotal').each(function () {
@@ -139,7 +139,7 @@ function collapseFour() {
             groupTotalCommunityManagement += isNaN(price) ? 0 : price;
         });
 
-        $('#groupTotalCommunityManagement').text(groupTotalCommunityManagement.toFixed(2));
+        $('#groupTotalCommunityManagement').text(formatNumber(groupTotalCommunityManagement));
 
         var total = 0;
         $('.groupTotal').each(function () {
@@ -161,7 +161,8 @@ function collapseFive() {
             groupTotalPaginasWeb += isNaN(price) ? 0 : price;
         });
 
-        $('#groupTotalPaginasWeb').text(groupTotalPaginasWeb.toFixed(2));
+        $('#groupTotalPaginasWeb').text(formatNumber(groupTotalPaginasWeb));
+        
 
         var total = 0;
         $('.groupTotal').each(function () {
@@ -188,7 +189,7 @@ function collapseSix() {
         var aplicacionesExtraPrice = aplicacionesExtraQuantity * 1000;
         groupTotal += aplicacionesExtraPrice;
 
-        cardBody.find('#groupTotalDisenoBranding').text(groupTotal.toFixed(2));
+        cardBody.find('#groupTotalDisenoBranding').text(formatNumber(groupTotal));
         updateTotal();
     }
 }
@@ -202,14 +203,14 @@ function collapseSeven() {
     });
 
     function updatePricesPaginasWebCopy() {
-        var groupTotalPaginasWebCopy = 0;
+        var groupTotal = 0;
 
         $('#collapseSeven input[type="checkbox"]:checked').each(function () {
             var price = Number($(this).data('price'));
-            groupTotalPaginasWebCopy += isNaN(price) ? 0 : price;
+            groupTotal += isNaN(price) ? 0 : price;
         });
 
-        $('#groupTotalPaginasWebCopy').text(groupTotalPaginasWebCopy.toFixed(2));
+        $('#groupTotalPaginasWebCopy').text(formatNumber(groupTotal));
 
         var total = 0;
         $('.groupTotal').each(function () {
@@ -232,7 +233,7 @@ function collapseEight() {
             groupTotal += isNaN(price) ? 0 : price;
         });
 
-        cardBody.find('#groupTotalExperienciasInmersivas').text(groupTotal.toFixed(2));
+        cardBody.find('#groupTotalExperienciasInmersivas').text(formatNumber(groupTotal));
         updateTotal();
     }
 }
@@ -249,7 +250,7 @@ function collapseNine() {
             groupTotal += isNaN(price) ? 0 : price;
         });
 
-        cardBody.find('#groupTotalSeo').text(groupTotal.toFixed(2));
+        cardBody.find('#groupTotalSeo').text(formatNumber(groupTotal));
         updateTotal();
     }
 }
@@ -266,7 +267,7 @@ function collapseTen() {
             groupTotal += isNaN(price) ? 0 : price;
         });
 
-        cardBody.find('#groupTotalTiendaLinea').text(groupTotal.toFixed(2));
+        cardBody.find('#groupTotalTiendaLinea').text(formatNumber(groupTotal));
         updateTotal();
     }
 }
@@ -283,7 +284,7 @@ function collapseEleven() {
             groupTotal += isNaN(price) ? 0 : price;
         });
 
-        cardBody.find('#groupTotalMantenimiento').text(groupTotal.toFixed(2));
+        cardBody.find('#groupTotalMantenimiento').text(formatNumber(groupTotal));
         updateTotal();
     }
 }
@@ -300,7 +301,7 @@ function collapseTwelve() {
             groupTotal += isNaN(price) ? 0 : price;
         });
 
-        cardBody.find('#groupTotalAsesoria').text(groupTotal.toFixed(2));
+        cardBody.find('#groupTotalAsesoria').text(formatNumber(groupTotal));
         updateTotal();
     }
 }
@@ -317,17 +318,25 @@ function collapseThirteen() {
             groupTotal += isNaN(price) ? 0 : price;
         });
 
-        cardBody.find('#groupTotalPlanesIntegrales').text(groupTotal.toFixed(2));
+        cardBody.find('#groupTotalPlanesIntegrales').text(formatNumber(groupTotal));
         updateTotal();
     }
 }
 
+function formatNumber(num) {
+    return num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
 
 function updateTotal() {
     var total = 0;
     $('.groupTotal').each(function () {
-        total += Number($(this).text());
+        var groupTotalString = $(this).text();
+        var groupTotalNumber = Number(groupTotalString.replace(/,/g, ''));
+        total += groupTotalNumber;
     });
 
-    $('#total').text(total.toFixed(2));
+    $('#total').text(formatNumber(total));
 }
+
+// // Puedes reemplazar las líneas similares en todas las funciones de la misma manera:
+// cardBody.find('.groupTotal').text(formatNumber(groupTotal));
