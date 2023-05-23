@@ -11,6 +11,7 @@ $(document).ready(function () {
     collapseTen();
     collapseEleven();
     collapseTwelve();
+    collapseThirteen();
     updateTotal();
 });
 
@@ -300,6 +301,23 @@ function collapseTwelve() {
         });
 
         cardBody.find('#groupTotalAsesoria').text(groupTotal.toFixed(2));
+        updateTotal();
+    }
+}
+
+function collapseThirteen() {
+    $('#collapseThirteen input[type="checkbox"]').on('input', updatePrices);
+
+    function updatePrices() {
+        var cardBody = $(this).closest('.card-body');
+        var groupTotal = 0;
+
+        cardBody.find('input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotal += isNaN(price) ? 0 : price;
+        });
+
+        cardBody.find('#groupTotalPlanesIntegrales').text(groupTotal.toFixed(2));
         updateTotal();
     }
 }
