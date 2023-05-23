@@ -8,6 +8,9 @@ $(document).ready(function () {
     collapseSeven();
     collapseEight();
     collapseNine();
+    collapseTen();
+    collapseEleven();
+    collapseTwelve();
     updateTotal();
 });
 
@@ -249,6 +252,58 @@ function collapseNine() {
         updateTotal();
     }
 }
+
+function collapseTen() {
+    $('#collapseTen input[type="checkbox"]').on('input', updatePrices);
+
+    function updatePrices() {
+        var cardBody = $(this).closest('.card-body');
+        var groupTotal = 0;
+
+        cardBody.find('input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotal += isNaN(price) ? 0 : price;
+        });
+
+        cardBody.find('#groupTotalTiendaLinea').text(groupTotal.toFixed(2));
+        updateTotal();
+    }
+}
+
+function collapseEleven() {
+    $('#collapseEleven input[type="checkbox"]').on('input', updatePrices);
+
+    function updatePrices() {
+        var cardBody = $(this).closest('.card-body');
+        var groupTotal = 0;
+
+        cardBody.find('input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotal += isNaN(price) ? 0 : price;
+        });
+
+        cardBody.find('#groupTotalMantenimiento').text(groupTotal.toFixed(2));
+        updateTotal();
+    }
+}
+
+function collapseTwelve() {
+    $('#collapseTwelve input[type="checkbox"]').on('input', updatePrices);
+
+    function updatePrices() {
+        var cardBody = $(this).closest('.card-body');
+        var groupTotal = 0;
+
+        cardBody.find('input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotal += isNaN(price) ? 0 : price;
+        });
+
+        cardBody.find('#groupTotalAsesoria').text(groupTotal.toFixed(2));
+        updateTotal();
+    }
+}
+
 
 function updateTotal() {
     var total = 0;
