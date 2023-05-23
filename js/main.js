@@ -4,6 +4,7 @@ $(document).ready(function () {
     collapseThree();
     collapseFour();
     collapseFive();
+    collapseSix();
     collapseSeven();
     updateTotal();
 });
@@ -162,6 +163,27 @@ function collapseFive() {
         });
 
         $('#total').text(total.toFixed(2));
+    }
+}
+
+function collapseSix() {
+    $('#collapseSix input[type="checkbox"], #collapseSix #aplicacionesExtraQuantity').on('input', updatePrices);
+
+    function updatePrices() {
+        var cardBody = $(this).closest('.card-body');
+        var groupTotal = 0;
+
+        cardBody.find('input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotal += isNaN(price) ? 0 : price;
+        });
+
+        var aplicacionesExtraQuantity = cardBody.find('#aplicacionesExtraQuantity').val();
+        var aplicacionesExtraPrice = aplicacionesExtraQuantity * 1000;
+        groupTotal += aplicacionesExtraPrice;
+
+        cardBody.find('#groupTotalDisenoBranding').text(groupTotal.toFixed(2));
+        updateTotal();
     }
 }
 
