@@ -102,31 +102,36 @@ function collapseTwo() {
             total += Number($(this).text());
         });
 
-        $('#total').text(total.toFixed(2));
+        $('#total').text(formatNumber(groupTotalFotografia));
+        updateTotal();
     }
 }
 
 function collapseThree() {
-    $('#collapseThree input[type="checkbox"]').on('input', updatePricesPublicidadPagada);
+    $('#collapseThree input[type="checkbox"]').on('input', updatePrices);
 
-    function updatePricesPublicidadPagada() {
-        var groupTotalPublicidadPagada = 0;
+    function updatePrices() {
+        var cardBody = $(this).closest('.card-body');
+        var groupTotal = 0;
 
-        $('#collapseThree input[type="checkbox"]:checked').each(function () {
+        cardBody.find('input[type="checkbox"]:checked').each(function () {
             var price = Number($(this).data('price'));
-            groupTotalPublicidadPagada += isNaN(price) ? 0 : price;
+            groupTotal += isNaN(price) ? 0 : price;
         });
 
-        $('#groupTotalPublicidadPagada').text(formatNumber(groupTotalPublicidadPagada));
+        cardBody.find('#groupTotalPublicidadPagada').text(formatNumber(groupTotal));
+
+        updateTotal(); // Actualizar el valor total llamando a la función updateTotal()
 
         var total = 0;
         $('.groupTotal').each(function () {
-            total += Number($(this).text());
+            total += Number($(this).text().replace(/[^0-9.-]+/g, ''));
         });
 
-        $('#total').text(total.toFixed(2));
+        $('#total').text(formatNumber(total));
     }
 }
+
 
 function collapseFour() {
     $('#collapseFour input[type="checkbox"]').on('input', updatePricesCommunityManagement);
@@ -146,7 +151,8 @@ function collapseFour() {
             total += Number($(this).text());
         });
 
-        $('#total').text(total.toFixed(2));
+        $('#total').text(formatNumber(groupTotalCommunityManagement));
+        updateTotal();
     }
 }
 
@@ -169,7 +175,8 @@ function collapseFive() {
             total += Number($(this).text());
         });
 
-        $('#total').text(total.toFixed(2));
+        $('#total').text(formatNumber(groupTotalPaginasWeb));
+        updateTotal();
     }
 }
 
@@ -217,7 +224,8 @@ function collapseSeven() {
             total += Number($(this).text());
         });
 
-        $('#total').text(total.toFixed(2));
+        $('#total').text(formatNumber(groupTotal));
+        updateTotal();
     }
 }
 
