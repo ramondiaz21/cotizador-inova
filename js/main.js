@@ -6,6 +6,7 @@ $(document).ready(function () {
     collapseFive();
     collapseSix();
     collapseSeven();
+    collapseEight();
     updateTotal();
 });
 
@@ -214,6 +215,22 @@ function collapseSeven() {
     }
 }
 
+function collapseEight() {
+    $('#collapseEight input[type="checkbox"]').on('input', updatePrices);
+
+    function updatePrices() {
+        var cardBody = $(this).closest('.card-body');
+        var groupTotal = 0;
+
+        cardBody.find('input[type="checkbox"]:checked').each(function () {
+            var price = Number($(this).data('price'));
+            groupTotal += isNaN(price) ? 0 : price;
+        });
+
+        cardBody.find('#groupTotalExperienciasInmersivas').text(groupTotal.toFixed(2));
+        updateTotal();
+    }
+}
 function updateTotal() {
     var total = 0;
     $('.groupTotal').each(function () {
