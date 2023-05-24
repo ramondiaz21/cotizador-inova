@@ -357,17 +357,17 @@
             <h5>Diseño de Identidad de Marca</h5>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete1" class="custom-control-input" data-price="25000">
-              <label class="custom-control-label" for="im_paquete1">Alcance Local (5 Aplicaciones) - $25,000</label>
+              <label class="custom-control-label" for="im_paquete1">Alcance Local (5 Aplicaciones) <span class="hide-on-print">- $25,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete2" class="custom-control-input" data-price="30000">
-              <label class="custom-control-label" for="im_paquete2">Alcance Nacional (7 Aplicaciones) - $30,000</label>
+              <label class="custom-control-label" for="im_paquete2">Alcance Nacional (7 Aplicaciones) <span class="hide-on-print">- $30,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete3" class="custom-control-input" data-price="40000">
-              <label class="custom-control-label" for="im_paquete3">Alcance Internacional (10 Aplicaciones) -
+              <label class="custom-control-label" for="im_paquete3">Alcance Internacional (10 Aplicaciones) <span class="hide-on-print">-
                 $40,000</label>
             </div>
 
@@ -376,17 +376,17 @@
             <h5>Logo y Brand Guidelines</h5>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete4" class="custom-control-input" data-price="15000">
-              <label class="custom-control-label" for="im_paquete4">Alcance Local (5 Aplicaciones) - $15,000</label>
+              <label class="custom-control-label" for="im_paquete4">Alcance Local (5 Aplicaciones) <span class="hide-on-print">- $15,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete5" class="custom-control-input" data-price="20000">
-              <label class="custom-control-label" for="im_paquete5">Alcance Nacional (7 Aplicaciones) - $20,000</label>
+              <label class="custom-control-label" for="im_paquete5">Alcance Nacional (7 Aplicaciones) <span class="hide-on-print">- $20,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete6" class="custom-control-input" data-price="24000">
-              <label class="custom-control-label" for="im_paquete6">Alcance Internacional (10 Aplicaciones) -
+              <label class="custom-control-label" for="im_paquete6">Alcance Internacional (10 Aplicaciones) <span class="hide-on-print">-
                 $24,000</label>
             </div>
 
@@ -395,17 +395,17 @@
             <h5>Consolidación de Marca</h5>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete7" class="custom-control-input" data-price="10000">
-              <label class="custom-control-label" for="im_paquete7">Alcance Local (5 Aplicaciones) - $10,000</label>
+              <label class="custom-control-label" for="im_paquete7">Alcance Local (5 Aplicaciones) <span class="hide-on-print">- $10,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete" class="custom-control-input" data-price="12000">
-              <label class="custom-control-label" for="im_paquete">Alcance Nacional (7 Aplicaciones) - $12,000</label>
+              <label class="custom-control-label" for="im_paquete">Alcance Nacional (7 Aplicaciones) <span class="hide-on-print">- $12,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete9" class="custom-control-input" data-price="14000">
-              <label class="custom-control-label" for="im_paquete9">Alcance Internacional (10 Aplicaciones) -
+              <label class="custom-control-label" for="im_paquete9">Alcance Internacional (10 Aplicaciones) <span class="hide-on-print">-
                 $14,000</label>
             </div>
 
@@ -730,16 +730,21 @@
           </div>
         </div>
       </div>
-
-
+      <div class="final-wrapper">
+       
+        <h3 class="text-center">Cotización Total: $<span id="total">0</span></h3>
+        <button id="downloadPDF" class="hide-on-print">Generar PDF</button>
+      </div>
     </div>
-    <hr>
-    <h3 class="text-center">Cotización Total: $<span id="total">0</span></h3>
-    <!-- <button id="downloadPDF">Generar PDF</button> -->
+    
+   
   </div>
   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 
 
 

@@ -23,7 +23,7 @@ function collapseOne() {
         var labelId = '#' + sliderId.replace('Slider', 'Duration');
         $(labelId).text($(this).val());
     });
-    
+
     $('#collapseOne input[type="checkbox"]').change(function () {
         if ($(this).is('#largeAd') || $(this).is('#explanatoryVideo')) {
             $('#collapseOne #miniClipQuantity').prop('disabled', !this.checked);
@@ -168,7 +168,7 @@ function collapseFive() {
         });
 
         $('#groupTotalPaginasWeb').text(formatNumber(groupTotalPaginasWeb));
-        
+
 
         var total = 0;
         $('.groupTotal').each(function () {
@@ -332,7 +332,10 @@ function collapseThirteen() {
 }
 
 function formatNumber(num) {
-    return num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return num.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
 }
 
 function updateTotal() {
@@ -346,5 +349,34 @@ function updateTotal() {
     $('#total').text(formatNumber(total));
 }
 
-// // Puedes reemplazar las líneas similares en todas las funciones de la misma manera:
-// cardBody.find('.groupTotal').text(formatNumber(groupTotal));
+document.getElementById("downloadPDF").onclick = function () {
+    window.print();
+    location.reload();
+    //resetPage();
+};
+
+function resetPage() {
+    // // Desmarca todos los checkboxes
+    // const checkboxes = document.querySelectorAll('input[type=checkbox]');
+    // checkboxes.forEach(checkbox => checkbox.checked = false);
+
+    // // Restablece todos los sliders
+    // const sliders = document.querySelectorAll('input[type=range]');
+    // sliders.forEach(slider => slider.value = slider.min);
+
+    // // Restablece todos los inputs de tipo numérico
+    // const numberInputs = document.querySelectorAll('input[type=number]');
+    // numberInputs.forEach(input => input.value = '');
+
+    // // Limpiando la cotización total
+    // document.getElementById('total').textContent = '0';
+
+    // // Reiniciando todos los elementos con la clase 'groupTotal'
+    // let groupTotals = document.getElementsByClassName('groupTotal');
+    // for (let i = 0; i < groupTotals.length; i++) {
+    //     groupTotals[i].textContent = '0';
+    // }
+
+    // // Cierra todos los collapses
+    // $('.collapse').collapse('hide');
+}
