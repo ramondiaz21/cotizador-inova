@@ -154,6 +154,27 @@ hr {
 
 @media print {
 
+  .special-on-print {
+    height: 89vh;
+  }
+
+  .card {
+    height: 49vh;
+  }
+
+  /* .card:nth-of-type(1),
+    .card:nth-of-type(2) {
+    height: 89vh;
+  }
+
+  .card:nth-of-type(1) .card-body {
+    height:fit-content;
+  }
+
+  .card:nth-of-type(2) .card-body {
+    height:fit-content;
+  } */
+
   .hide-on-print {
     display: none!important;
   }
@@ -174,9 +195,7 @@ hr {
     background-color: white!important;
   }
 
-  .card {
-    height: 100%;
-  }
+  
 
   /* styles.css */
   body {
@@ -279,9 +298,6 @@ hr {
     }
   }
 
-  .card {
-    height: fit-content;
-  }
 
   .btn-link {
     width: 100%;
