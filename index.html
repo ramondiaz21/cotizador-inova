@@ -25,7 +25,7 @@
 <body class="bg-dark text-white">
   <div class="container">
     <div class="text-center my-5">
-      <h1 class="display-4">Cotizador</h1>
+      <h1 class="display-4">Inova Enterprise MX</h1>
     </div>
     <div id="accordion">
       <div class="special-on-print">
@@ -43,101 +43,85 @@
               <!-- Producción RRSS Lite -->
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" id="lite" name="prod_rrss" class="custom-control-input" data-price="7500">
-                <label class="custom-control-label" for="lite">Producción RRSS Lite - $7,500</label>
+                <label class="custom-control-label" for="lite">Producción RRSS Lite <span class="hide-on-print">-
+                    $7,500</span></label>
               </div>
-  
-  
-  
+
               <hr>
-  
+
               <!-- Producción RRSS Pro -->
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" id="pro" name="prod_rrss" class="custom-control-input" data-price="25000">
-                <label class="custom-control-label" for="pro">Producción RRSS Pro - $25,000</label>
+                <label class="custom-control-label" for="pro">Producción RRSS Pro <span class="hide-on-print">-
+                    $25,000</span></label>
               </div>
-  
-  
-  
-  
-  
+
               <hr>
-  
+
               <!-- Video Ad Corto -->
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" id="shortAd" name="prod_video" class="custom-control-input" data-price="5000">
-                <label class="custom-control-label" for="shortAd">Video Ad Corto - $<span
-                    id="shortAdPrice">5,000</span></label>
+                <label class="custom-control-label" for="shortAd">Video Ad Corto <span class="hide-on-print">- $<span
+                      id="shortAdPrice">5,000</span></span></label>
               </div>
-  
-  
-  
+
               <!-- Slider de duración para Video Ad Corto -->
               <div class="slidecontainer">
                 Duración del video: <span id="shortAdDuration">15</span> segundos
                 <input type="range" min="15" max="30" value="15" class="slider" id="shortAdSlider">
               </div>
-  
+
               <hr>
-  
+
               <!-- Video Ad Largo -->
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" id="largeAd" name="prod_video" class="custom-control-input" data-price="10000">
-                <label class="custom-control-label" for="largeAd">Video Ad Largo - $<span
-                    id="largeAdPrice">10,000</span></label>
+                <label class="custom-control-label" for="largeAd">Video Ad Largo <span class="hide-on-print">- $<span
+                      id="largeAdPrice">10,000</span></span></label>
               </div>
-  
-  
-  
+
               <!-- Slider de duración para Video Ad Corto -->
               <div class="slidecontainer">
                 Duración del video: <span id="largeAdDuration">30</span> segundos
                 <input type="range" min="30" max="60" value="30" class="slider" id="largeAdSlider">
               </div>
-  
-              <!-- Mini Clips para Video Ad Largo
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"># de Mini clips</span>
-                </div>
-                <input type="number" id="miniClipLargeAdQuantity" class="form-control" min="1">
-              </div> -->
-  
+
               <hr>
-  
+
               <!-- Videos explicativos -->
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" id="explanatoryVideo" name="prod_video" class="custom-control-input"
                   data-price="25000">
-                <label class="custom-control-label" for="explanatoryVideo">Videos explicativos - $<span
-                    id="explanatoryVideoPrice">25,000</span></label>
+                <label class="custom-control-label" for="explanatoryVideo">Videos explicativos <span
+                    class="hide-on-print">- $<span id="explanatoryVideoPrice">25,000</span></span></label>
               </div>
-  
+
               <!-- Slider de duración para Videos explicativos -->
               <div class="slidecontainer">
                 Duración del video: <span id="explanatoryVideoDuration">60</span> segundos
                 <input type="range" min="60" max="120" value="60" class="slider" id="explanatoryVideoSlider">
               </div>
-  
+
               <hr>
-  
+
               <!-- Entrega Express para Video Ad Corto -->
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" id="expressShortAd" class="custom-control-input" data-extra="0.25">
                 <label class="custom-control-label" for="expressShortAd">Entrega Express</label>
               </div>
-  
+
               <!-- Subtítulos en otro idioma for Pro -->
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" id="subtitlePro" class="custom-control-input" data-price="1000">
                 <label class="custom-control-label" for="subtitlePro">Subtítulos en otro idioma</label>
               </div>
-  
+
               <!-- Mini clips para redes sociales -->
               <div>
                 <label for="miniClipQuantity">Mini clips para redes sociales</label>
                 <input type="number" id="miniClipQuantity" min="0" max="100" value="0" disabled>
               </div>
-  
+
               <hr>
               <!-- Display total -->
               <!-- Display group total -->
@@ -159,54 +143,58 @@
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="card-body">
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" id="sesionLite" name="sesion_lite" class="custom-control-input" data-price="7500">
-                <label class="custom-control-label" for="sesionLite">Sesión de Fotos RRSS Lite - $7,500</label>
+                <input type="checkbox" id="sesionLite" name="sesion_lite" class="custom-control-input"
+                  data-price="7500">
+                <label class="custom-control-label" for="sesionLite">Sesión de Fotos RRSS Lite <span
+                    class="hide-on-print">- $7,500</span></label>
               </div>
-  
+
               <div>
                 <label for="fotoExtraQuantity_400">Foto Extra</label>
                 <input type="number" id="fotoExtraQuantity_400_1" data-price="400" min="0" max="100" value="0" disabled>
               </div>
-  
+
               <hr>
-  
+
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" id="sesionProducto" name="sesion_producto" class="custom-control-input"
                   data-price="10000">
-                <label class="custom-control-label" for="sesionProducto">Sesión de Fotos Producto (E-commerce) -
-                  $10,000</label>
+                <label class="custom-control-label" for="sesionProducto">Sesión de Fotos Producto (E-commerce) <span
+                    class="hide-on-print">-
+                    $10,000</span></label>
               </div>
-  
+
               <div>
                 <label for="fotoExtraQuantity_300">Foto Extra</label>
                 <input type="number" id="fotoExtraQuantity_300_1" data-price="300" min="0" max="100" value="0" disabled>
               </div>
-  
+
               <hr>
-  
+
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" id="sesionPubli" name="sesion_publi" class="custom-control-input"
                   data-price="15000">
-                <label class="custom-control-label" for="sesionPubli">Sesión de Fotos Publicitaria - $15,000</label>
+                <label class="custom-control-label" for="sesionPubli">Sesión de Fotos Publicitaria <span
+                    class="hide-on-print">- $15,000</span></label>
               </div>
-  
+
               <div>
                 <label for="fotoExtraQuantity2_400">Foto Extra</label>
                 <input type="number" id="fotoExtraQuantity_400_2" data-price="400" min="0" max="100" value="0" disabled>
               </div>
-  
+
               <hr>
               <!-- Display total -->
               <!-- Display group total -->
               <h3>Total del Grupo: $<span id="groupTotalFotografia" class="groupTotal">0</span></h3>
-  
-  
+
+
             </div>
           </div>
         </div>
       </div>
-      
-      
+
+
       <div class="card">
         <div class="card-header" id="headingThree">
           <h5 class="mb-0">
@@ -220,43 +208,51 @@
           <div class="card-body">
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pp_google1" name="pp_google1" class="custom-control-input" data-price="3000">
-              <label class="custom-control-label" for="pp_google1">Google (1 Audiencia) - $3,000</label>
+              <label class="custom-control-label" for="pp_google1">Google (1 Audiencia) <span class="hide-on-print">-
+                  $3,000</span></label>
             </div>
             <hr>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pp_google2" name="pp_google2" class="custom-control-input" data-price="4500">
-              <label class="custom-control-label" for="pp_google2">Google (Pruebas de audiencia) - $4,500</label>
+              <label class="custom-control-label" for="pp_google2">Google (Pruebas de audiencia) <span
+                  class="hide-on-print">- $4,500</span></label>
             </div>
             <hr>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pp_google3" name="pp_google3" class="custom-control-input" data-price="6000">
-              <label class="custom-control-label" for="pp_google3">Google (Conversiones - Venta/Shopping) -
-                $6,000</label>
+              <label class="custom-control-label" for="pp_google3">Google (Conversiones - Venta/Shopping) <span
+                  class="hide-on-print">-
+                  $6,000</span></label>
             </div>
             <hr>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pp_fbinsta1" name="pp_fbinsta1" class="custom-control-input" data-price="3000">
-              <label class="custom-control-label" for="pp_fbinsta1">Facebook & Instagram - $3,000</label>
-            </div>
-            <hr>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="pp_fbinsta2" name="pp_fbinsta2" class="custom-control-input" data-price="5000">
-              <label class="custom-control-label" for="pp_fbinsta2">Facebook & Instagram - $5,000</label>
+              <label class="custom-control-label" for="pp_fbinsta1">Facebook & Instagram (Atracción) <span
+                  class="hide-on-print">- $3,000</span></label>
             </div>
             <hr>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pp_fbinsta3" name="pp_fbinsta3" class="custom-control-input" data-price="4500">
-              <label class="custom-control-label" for="pp_fbinsta3">Facebook & Instagram - $4,500</label>
+              <label class="custom-control-label" for="pp_fbinsta3">Facebook & Instagram (Interacción) <span
+                  class="hide-on-print">- $4,500</span></label>
+            </div>
+            <hr>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" id="pp_fbinsta2" name="pp_fbinsta2" class="custom-control-input" data-price="5000">
+              <label class="custom-control-label" for="pp_fbinsta2">Facebook & Instagram (Conversión) <span
+                  class="hide-on-print">- $5,000</span></label>
             </div>
             <hr>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pp_link1" name="pp_link1" class="custom-control-input" data-price="4500">
-              <label class="custom-control-label" for="pp_link1">LinkedIn - $4,500</label>
+              <label class="custom-control-label" for="pp_link1">LinkedIn (Atracción) <span class="hide-on-print">-
+                  $4,500</span></label>
             </div>
             <hr>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pp_link2" name="pp_link2" class="custom-control-input" data-price="6000">
-              <label class="custom-control-label" for="pp_link2">LinkedIn - $6000</label>
+              <label class="custom-control-label" for="pp_link2">LinkedIn (Conversión) <span class="hide-on-print">-
+                  $6000</span></label>
             </div>
 
             <hr>
@@ -280,22 +276,22 @@
           <div class="card-body">
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="cm_gestion1" name="cm_gestion1" class="custom-control-input" data-price="2500">
-              <label class="custom-control-label" for="cm_gestion1">Gestión (1 a 3 plataformas - Baja Demanda) -
-                $2,500</label>
+              <label class="custom-control-label" for="cm_gestion1">Gestión (1 a 3 plataformas - Baja Demanda) <span class="hide-on-print">-
+                $2,500</span></label>
             </div>
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="cm_gestion2" name="cm_gestion2" class="custom-control-input" data-price="6000">
-              <label class="custom-control-label" for="cm_gestion2">Gestión (1 a 3 plataformas - Alta Demanda) -
-                $6,000</label>
+              <label class="custom-control-label" for="cm_gestion2">Gestión (1 a 3 plataformas - Alta Demanda) <span class="hide-on-print">-
+                $6,000</span></label>
             </div>
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="cm_gestion3" name="cm_gestion3" class="custom-control-input" data-price="5000">
-              <label class="custom-control-label" for="cm_gestion3">Optimización de redes sociales (3 plataformas) -
-                $5,000</label>
+              <label class="custom-control-label" for="cm_gestion3">Optimización de redes sociales (3 plataformas) <span class="hide-on-print">-
+                $5,000</span></label>
             </div>
             <hr>
 
@@ -317,28 +313,32 @@
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pw_paquete1" name="pw_paquete1" class="custom-control-input"
                 data-price="14000">
-              <label class="custom-control-label" for="pw_paquete1">Landing - $14,000</label>
+              <label class="custom-control-label" for="pw_paquete1">Landing <span class="hide-on-print">-
+                  $14,000</span></label>
             </div>
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pw_paquete2" name="pw_paquete2" class="custom-control-input"
                 data-price="16000">
-              <label class="custom-control-label" for="pw_paquete2">Landing SEO - $16,000</label>
+              <label class="custom-control-label" for="pw_paquete2">Landing SEO <span class="hide-on-print">-
+                  $16,000</span></label>
             </div>
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pw_paquete3" name="pw_paquete3" class="custom-control-input"
                 data-price="22000">
-              <label class="custom-control-label" for="pw_paquete3">Página Web - $22,000</label>
+              <label class="custom-control-label" for="pw_paquete3">Página Web <span class="hide-on-print">-
+                  $22,000</span></label>
             </div>
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pw_paquete4" name="pw_paquete4" class="custom-control-input"
                 data-price="26000">
-              <label class="custom-control-label" for="pw_paquete4">Página Web SEO - $26,000</label>
+              <label class="custom-control-label" for="pw_paquete4">Página Web SEO <span class="hide-on-print">-
+                  $26,000</span></label>
             </div>
             <hr>
 
@@ -363,18 +363,21 @@
             <h5>Diseño de Identidad de Marca</h5>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete1" class="custom-control-input" data-price="25000">
-              <label class="custom-control-label" for="im_paquete1">Alcance Local (5 Aplicaciones) <span class="hide-on-print">- $25,000</span></label>
+              <label class="custom-control-label" for="im_paquete1">Alcance Local (5 Aplicaciones) <span
+                  class="hide-on-print">- $25,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete2" class="custom-control-input" data-price="30000">
-              <label class="custom-control-label" for="im_paquete2">Alcance Nacional (7 Aplicaciones) <span class="hide-on-print">- $30,000</span></label>
+              <label class="custom-control-label" for="im_paquete2">Alcance Nacional (7 Aplicaciones) <span
+                  class="hide-on-print">- $30,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete3" class="custom-control-input" data-price="40000">
-              <label class="custom-control-label" for="im_paquete3">Alcance Internacional (10 Aplicaciones) <span class="hide-on-print">-
-                $40,000</label>
+              <label class="custom-control-label" for="im_paquete3">Alcance Internacional (10 Aplicaciones) <span
+                  class="hide-on-print">-
+                  $40,000</span></label>
             </div>
 
             <hr>
@@ -382,18 +385,21 @@
             <h5>Logo y Brand Guidelines</h5>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete4" class="custom-control-input" data-price="15000">
-              <label class="custom-control-label" for="im_paquete4">Alcance Local (5 Aplicaciones) <span class="hide-on-print">- $15,000</span></label>
+              <label class="custom-control-label" for="im_paquete4">Alcance Local (5 Aplicaciones) <span
+                  class="hide-on-print">- $15,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete5" class="custom-control-input" data-price="20000">
-              <label class="custom-control-label" for="im_paquete5">Alcance Nacional (7 Aplicaciones) <span class="hide-on-print">- $20,000</span></label>
+              <label class="custom-control-label" for="im_paquete5">Alcance Nacional (7 Aplicaciones) <span
+                  class="hide-on-print">- $20,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete6" class="custom-control-input" data-price="24000">
-              <label class="custom-control-label" for="im_paquete6">Alcance Internacional (10 Aplicaciones) <span class="hide-on-print">-
-                $24,000</label>
+              <label class="custom-control-label" for="im_paquete6">Alcance Internacional (10 Aplicaciones) <span
+                  class="hide-on-print">-
+                  $24,000</span></label>
             </div>
 
             <hr>
@@ -401,18 +407,21 @@
             <h5>Consolidación de Marca</h5>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete7" class="custom-control-input" data-price="10000">
-              <label class="custom-control-label" for="im_paquete7">Alcance Local (5 Aplicaciones) <span class="hide-on-print">- $10,000</span></label>
+              <label class="custom-control-label" for="im_paquete7">Alcance Local (5 Aplicaciones) <span
+                  class="hide-on-print">- $10,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete" class="custom-control-input" data-price="12000">
-              <label class="custom-control-label" for="im_paquete">Alcance Nacional (7 Aplicaciones) <span class="hide-on-print">- $12,000</span></label>
+              <label class="custom-control-label" for="im_paquete">Alcance Nacional (7 Aplicaciones) <span
+                  class="hide-on-print">- $12,000</span></label>
             </div>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="im_paquete9" class="custom-control-input" data-price="14000">
-              <label class="custom-control-label" for="im_paquete9">Alcance Internacional (10 Aplicaciones) <span class="hide-on-print">-
-                $14,000</label>
+              <label class="custom-control-label" for="im_paquete9">Alcance Internacional (10 Aplicaciones) <span
+                  class="hide-on-print">-
+                  $14,000</span></label>
             </div>
 
             <hr>
@@ -443,20 +452,16 @@
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pwc_paquete1" name="pwc_paquete1" class="custom-control-input"
                 data-price="3000">
-              <label class="custom-control-label" for="pwc_paquete1">Contenido de Texto Landing - $3,000</label>
+              <label class="custom-control-label" for="pwc_paquete1">Contenido de Texto Landing <span
+                  class="hide-on-print">- $3,000</span></label>
             </div>
             <hr>
-
-            <!-- <div class="custom-control custom-checkbox">
-              <input type="checkbox" id="pwc_paquete2" name="pwc_paquete2" class="custom-control-input" data-price="3000">
-              <label class="custom-control-label" for="pwc_paquete2">Contenido de Texto Sitio Web - $3,000</label>
-            </div>
-            <hr> -->
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="pwc_paquete3" name="pwc_paquete3" class="custom-control-input"
                 data-price="1000">
-              <label class="custom-control-label" for="pwc_paquete3">Blog Post (Chico) - $1,000</label>
+              <label class="custom-control-label" for="pwc_paquete3">Blog Post (Chico) <span class="hide-on-print">-
+                  $1,000</span></label>
             </div>
 
 
@@ -489,28 +494,32 @@
             <h3>3D Para Filtros</h3>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="eid_paquete1" class="custom-control-input" data-price="4000">
-              <label class="custom-control-label" for="eid_paquete1">2D Estáticos - $4,000</label>
+              <label class="custom-control-label" for="eid_paquete1">2D Estáticos <span class="hide-on-print">-
+                  $4,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="eid_paquete2" class="custom-control-input" data-price="6000">
-              <label class="custom-control-label" for="eid_paquete2">2D Animados - $6,000</label>
+              <label class="custom-control-label" for="eid_paquete2">2D Animados <span class="hide-on-print">-
+                  $6,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="eid_paquete3" class="custom-control-input" data-price="8000">
-              <label class="custom-control-label" for="eid_paquete3">3D Estáticos - $8,000</label>
+              <label class="custom-control-label" for="eid_paquete3">3D Estáticos <span class="hide-on-print">-
+                  $8,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="eid_paquete4" class="custom-control-input" data-price="12000">
-              <label class="custom-control-label" for="eid_paquete4">3D Animados - $12,000</label>
+              <label class="custom-control-label" for="eid_paquete4">3D Animados <span class="hide-on-print">-
+                  $12,000</span></label>
             </div>
 
             <hr>
@@ -534,7 +543,8 @@
           <div class="card-body">
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="seo_paquete1" class="custom-control-input" data-price="4000">
-              <label class="custom-control-label" for="seo_paquete1">Análisis de SEO - $4,000</label>
+              <label class="custom-control-label" for="seo_paquete1">Análisis de SEO <span class="hide-on-print">-
+                  $4,000</span></label>
             </div>
 
             <hr>
@@ -558,14 +568,16 @@
           <div class="card-body">
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="tl_paquete1" class="custom-control-input" data-price="30000">
-              <label class="custom-control-label" for="tl_paquete1">Tienda en Línea (10 Productos) - $30,000</label>
+              <label class="custom-control-label" for="tl_paquete1">Tienda en Línea (10 Productos) <span
+                  class="hide-on-print">- $30,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="tl_paquete2" class="custom-control-input" data-price="35000">
-              <label class="custom-control-label" for="tl_paquete2">Tienda en Línea SEO (10 Productos) - $35,000</label>
+              <label class="custom-control-label" for="tl_paquete2">Tienda en Línea SEO (10 Productos) <span
+                  class="hide-on-print">- $35,000</span></label>
             </div>
 
             <hr>
@@ -589,15 +601,17 @@
           <div class="card-body">
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="mantenimiento_paquete1" class="custom-control-input" data-price="10000">
-              <label class="custom-control-label" for="mantenimiento_paquete1">Para Sitio Web SEO - $10,000</label>
+              <label class="custom-control-label" for="mantenimiento_paquete1">Para Sitio Web SEO <span
+                  class="hide-on-print">- $10,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="mantenimiento_paquete2" class="custom-control-input" data-price="15000">
-              <label class="custom-control-label" for="mantenimiento_paquete2">Para Tienda en Línea SEO (10 Productos) -
-                $15,000</label>
+              <label class="custom-control-label" for="mantenimiento_paquete2">Para Tienda en Línea SEO (10 Productos)
+                <span class="hide-on-print">-
+                  $15,000</span></label>
             </div>
 
             <hr>
@@ -621,24 +635,27 @@
           <div class="card-body">
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="asesoria_paquete1" class="custom-control-input" data-price="2000">
-              <label class="custom-control-label" for="asesoria_paquete1">Sesión de consultoría en videollamada -
-                $2,000</label>
+              <label class="custom-control-label" for="asesoria_paquete1">Sesión de consultoría en videollamada <span
+                  class="hide-on-print">-
+                  $2,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="asesoria_paquete2" class="custom-control-input" data-price="5000">
-              <label class="custom-control-label" for="asesoria_paquete2">Análisis de la competencia y del mercado -
-                $5,000</label>
+              <label class="custom-control-label" for="asesoria_paquete2">Análisis de la competencia y del mercado <span
+                  class="hide-on-print">-
+                  $5,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="asesoria_paquete3" class="custom-control-input" data-price="8000">
-              <label class="custom-control-label" for="asesoria_paquete3">Desarrollo de plan de acción detallado -
-                $8,000</label>
+              <label class="custom-control-label" for="asesoria_paquete3">Desarrollo de plan de acción detallado <span
+                  class="hide-on-print">-
+                  $8,000</span></label>
             </div>
 
             <hr>
@@ -646,7 +663,7 @@
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="asesoria_paquete4" class="custom-control-input" data-price="3000">
               <label class="custom-control-label" for="asesoria_paquete4">Seguimiento de la implementación del plan de
-                acción - $3,000</label>
+                acción <span class="hide-on-print">- $3,000</span></label>
             </div>
 
             <hr>
@@ -670,63 +687,63 @@
           <div class="card-body">
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="planesIntegrales_paquete1" class="custom-control-input" data-price="6000">
-              <label class="custom-control-label" for="planesIntegrales_paquete1">A1 - $6,000</label>
+              <label class="custom-control-label" for="planesIntegrales_paquete1">A1 <span class="hide-on-print">- $6,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="planesIntegrales_paquete2" class="custom-control-input" data-price="7200">
-              <label class="custom-control-label" for="planesIntegrales_paquete2">A2 - $7,200</label>
+              <label class="custom-control-label" for="planesIntegrales_paquete2">A2 <span class="hide-on-print">- $7,200</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="planesIntegrales_paquete3" class="custom-control-input" data-price="8800">
-              <label class="custom-control-label" for="planesIntegrales_paquete3">A3 - $8,800</label>
+              <label class="custom-control-label" for="planesIntegrales_paquete3">A3 <span class="hide-on-print">- $8,800</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="planesIntegrales_paquete4" class="custom-control-input" data-price="10000">
-              <label class="custom-control-label" for="planesIntegrales_paquete4">B1 - $10,000</label>
+              <label class="custom-control-label" for="planesIntegrales_paquete4">B1 <span class="hide-on-print">- $10,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="planesIntegrales_paquete5" class="custom-control-input" data-price="13000">
-              <label class="custom-control-label" for="planesIntegrales_paquete5">B2 - $13,000</label>
+              <label class="custom-control-label" for="planesIntegrales_paquete5">B2 <span class="hide-on-print">- $13,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="planesIntegrales_paquete6" class="custom-control-input" data-price="19000">
-              <label class="custom-control-label" for="planesIntegrales_paquete6">C1 - $19,000</label>
+              <label class="custom-control-label" for="planesIntegrales_paquete6">C1 <span class="hide-on-print">- $19,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="planesIntegrales_paquete7" class="custom-control-input" data-price="26000">
-              <label class="custom-control-label" for="planesIntegrales_paquete7">C2 - $26,000</label>
+              <label class="custom-control-label" for="planesIntegrales_paquete7">C2 <span class="hide-on-print">- $26,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="planesIntegrales_paquete8" class="custom-control-input" data-price="11000">
-              <label class="custom-control-label" for="planesIntegrales_paquete8">D1 - $11,000</label>
+              <label class="custom-control-label" for="planesIntegrales_paquete8">D1 <span class="hide-on-print">- $11,000</span></label>
             </div>
 
             <hr>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" id="planesIntegrales_paquete9" class="custom-control-input" data-price="17000">
-              <label class="custom-control-label" for="planesIntegrales_paquete9">D2 - $17,000</label>
+              <label class="custom-control-label" for="planesIntegrales_paquete9">D2 <span class="hide-on-print">- $17,000</span></label>
             </div>
 
             <hr>
@@ -737,16 +754,18 @@
         </div>
       </div>
       <div class="final-wrapper">
-       
+
         <h3 class="text-center">Cotización Total: $<span id="total">0</span></h3>
         <button id="downloadPDF" class="hide-on-print">Generar PDF</button>
       </div>
     </div>
-    
-   
+
+
   </div>
   <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
 

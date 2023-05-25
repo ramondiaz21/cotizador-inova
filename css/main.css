@@ -153,13 +153,19 @@ hr {
 }
 
 @media print {
-
   .special-on-print {
     height: 89vh;
   }
 
   .card {
     height: 49vh;
+  }
+
+  @media (max-width: 767.98px) {
+  
+    .card {
+      height: 100%;
+    }
   }
 
   /* .card:nth-of-type(1),
@@ -176,7 +182,7 @@ hr {
   } */
 
   .hide-on-print {
-    display: none!important;
+    display: none !important;
   }
 
   .collapse {
@@ -192,10 +198,8 @@ hr {
   }
 
   .bg-dark {
-    background-color: white!important;
+    background-color: white !important;
   }
-
-  
 
   /* styles.css */
   body {
@@ -244,7 +248,7 @@ hr {
   }
 
   .final-wrapper h3 {
-    color:black;
+    color: black;
   }
 
   .slider {
@@ -286,18 +290,6 @@ hr {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-
-  @media (max-width: 767.98px) {
-    #accordion {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    .final-wrapper {
-      flex-direction: column;
-      gap: 20px;
-    }
-  }
-
 
   .btn-link {
     width: 100%;
