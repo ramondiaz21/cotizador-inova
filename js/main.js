@@ -343,7 +343,7 @@ function updateTotal() {
     $('.groupTotal').each(function () {
         var groupTotalString = $(this).text();
         var groupTotalNumber = Number(groupTotalString.replace(/,/g, ''));
-        total += groupTotalNumber;
+        total += (groupTotalNumber * 1.16);
     });
 
     $('#total').text(formatNumber(total));
