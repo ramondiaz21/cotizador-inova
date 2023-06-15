@@ -351,7 +351,7 @@ function updateTotal() {
 
 document.getElementById("downloadPDF").onclick = function () {
     window.print();
-    location.reload();
+    //location.reload();
     //resetPage();
 };
 
